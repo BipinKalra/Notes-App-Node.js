@@ -28,21 +28,21 @@ yargs.version("1.1.0")
 
 // Create add command 
 yargs.command({
-  command : "add",
-  describe : "Add a new note",
-  builder : {
-    title : {
-      describe : "Note Title",
-      demandOption : true, // This makes the title a mandatory argument 
-      type : "string" // Enforces the title to have value of this type
+  command: "add",
+  describe: "Add a new note",
+  builder: {
+    title: {
+      describe: "Note Title",
+      demandOption: true, // This makes the title a mandatory argument 
+      type: "string" // Enforces the title to have value of this type
     },
-    body : {
-      describe : "Note Body",
-      demandOption : true,
-      type : "string"
+    body: {
+      describe: "Note Body",
+      demandOption: true,
+      type: "string"
     }
   },
-  handler (argv) {
+  handler(argv) {
     // console.log("Title: " + argv.title)
     // console.log("Body: " + argv.body)
 
@@ -52,16 +52,16 @@ yargs.command({
 
 // Create remove command 
 yargs.command({
-  command : "remove",
-  describe : "Remove a note",
-  builder : {
-    title : {
-      describe : "Title of the note to be deleted",
-      demandOption : true,
-      type : "string"
+  command: "remove",
+  describe: "Remove a note",
+  builder: {
+    title: {
+      describe: "Title of the note to be deleted",
+      demandOption: true,
+      type: "string"
     }
   },
-  handler (argv) {
+  handler(argv) {
     // console.log("Removing a note!")
     notes.removeNote(argv.title)
   }
@@ -69,25 +69,25 @@ yargs.command({
 
 // Create list command 
 yargs.command({
-  command : "list",
-  describe : "List the notes",
-  handler () {
+  command: "list",
+  describe: "List the notes",
+  handler() {
     notes.listNotes()
   }
 })
 
 // Create read command 
 yargs.command({
-  command : "read",
-  describe : "Read a note",
-  builder : {
-    title : {
-      describe : "Title of the note to be found",
-      demandOption : true,
-      type : "string"
-    } 
+  command: "read",
+  describe: "Read a note",
+  builder: {
+    title: {
+      describe: "Title of the note to be found",
+      demandOption: true,
+      type: "string"
+    }
   },
-  handler (argv) {
+  handler(argv) {
     notes.readNote(argv.title)
   }
 })
