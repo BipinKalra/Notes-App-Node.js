@@ -1,30 +1,10 @@
-// const addfunc = require("./utils")
-// const sum = addfunc(2,4)
-// console.log(sum)
-
 // const validator = require("validator")
 const chalk = require("chalk")
 const notes = require("./notes")
 const yargs = require("yargs")
 
-// console.log(getNotes())
-// console.log(chalk.green.bold.italic.inverse("Success!!"))
-// console.log(process.argv[process.argv.length - 1])
-
-// const command = process.argv[2]
-
-// if (command === "add") {
-//   console.log("Adding Note.")
-// }
-// else {
-//   console.log("something else.")
-// }
-
 // Customize yargs version
-
 yargs.version("1.1.0")
-
-// add, remove, read, list
 
 // Create add command 
 yargs.command({
@@ -94,3 +74,24 @@ yargs.command({
 
 // console.log(process.argv)
 console.log(yargs.argv)
+
+// DEPRECATED CODE FOR LEARNING
+
+// const addfunc = require("./utils")
+// const sum = addfunc(2,4)
+// console.log(sum)
+
+
+// console.log(getNotes())
+// console.log(chalk.green.bold.italic.inverse("Success!!"))
+// console.log(process.argv[process.argv.length - 1])
+
+// const command = process.argv[2]
+
+// if (command === "add") {
+//   console.log("Adding Note.")
+// }
+// else {
+//   console.log("something else.")
+// }
+
